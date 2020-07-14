@@ -1,0 +1,26 @@
+<main>
+
+<h1> Tic Tac Toe </h1>
+<hr>
+
+<p>Current Player = {{ currentPlayer() }} </p>
+<br>
+
+<div class="container">
+<div class="main" *ngFor="let square of squares;
+let i = index" 
+
+(click)="selectSquare(i)">
+
+<app-square [value]="square">
+
+
+    
+</app-square>
+</div>
+</div>
+
+
+</main>
+
+<!-- [ngClass]="{'btn-primary' : square.value === 'O' }" -->
