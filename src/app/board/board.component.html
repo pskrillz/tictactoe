@@ -1,10 +1,19 @@
 <main>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+        </style>
 
-<h1> Tic Tac Toe </h1>
-<hr>
 
-<p>Current Player = {{ currentPlayer() }} </p>
+
+<h1 class="title"> Tic Tac Toe </h1>
 <br>
+
+<text class="playerturn" 
+[ngClass]= 
+"{'redText' : currentPlayerO,
+  'blueText' : !currentPlayerO }"
+>{{ currentPlayer() }}'s</text><text class="turntext"> TURN! </text>
+<br><br>
 
 <div class="container">
 <div class="main" *ngFor="let square of squares;
@@ -20,7 +29,11 @@ let i = index"
 </div>
 </div>
 
+<br>
+<button (click)="newGame()" class="btn btn-primary newGameButton">
+New Game
+</button>
+
 
 </main>
 
-<!-- [ngClass]="{'btn-primary' : square.value === 'O' }" -->
