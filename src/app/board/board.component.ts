@@ -67,13 +67,15 @@ checkWin(){
       if (this.squares[a] && 
         this.squares[b] == this.squares[a] &&
          this.squares[c] == this.squares[a])
-          {
+      {
+        
         this.finishedGame = true
             if (this.currentPlayerO == true){
               this.playerXscore += 1
             } else if (this.currentPlayerO == false){
               this.playerOscore += 1
             }
+            return [this.squares[a], this.squares[b], this.squares[c]]
         
       } else {
         console.log("game unfinished")

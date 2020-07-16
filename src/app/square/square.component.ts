@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { BoardComponent } from '../board/board.component'
 
 @Component({
   selector: 'app-square',
@@ -8,7 +9,9 @@ import { Component, Input } from '@angular/core';
   "{ 
     'defaultButton' : value == null,
     'btn-primary' : value == 'O',
-    'btn-warning' : value == 'X' }">
+    'btn-warning' : value == 'X',
+    'disabled': _board.finishedGame == true}"
+    >
   {{ value }} 
   </button> 
  
@@ -18,7 +21,7 @@ import { Component, Input } from '@angular/core';
 export class SquareComponent {
 @Input() value
 
-  constructor() { }
+  constructor(public _board : BoardComponent) { }
 
 
   ngOnInit(): void {
