@@ -32,6 +32,7 @@ main{
 
 .title{
     font-size: 70px;
+    color: white;
     margin-right: 30px;
     font-family: 'Modak', cursive;
     transform: rotate(-5deg);
@@ -39,11 +40,11 @@ main{
 }
 
 .redText{
-    color: red
+    color: darkred
 }
 
 .blueText{
-    color: blue
+    color: darkblue
 }
 
 .newGameButton{
@@ -53,5 +54,6 @@ main{
 
 .score{
     margin-left: 190px;
+    color: white;
 }
 
