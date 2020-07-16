@@ -11,7 +11,8 @@ export class BoardComponent implements OnInit {
   currentPlayerO: boolean;
   winner: string;
   finishedGame = false;
-
+  playerOscore = 0;
+  playerXscore = 0;
 
 
 
@@ -69,9 +70,9 @@ checkWin(){
           {
         this.finishedGame = true
             if (this.currentPlayerO == true){
-              alert("Player X Wins!")
+              this.playerXscore += 1
             } else if (this.currentPlayerO == false){
-              alert("Player O Wins!")
+              this.playerOscore += 1
             }
         
       } else {

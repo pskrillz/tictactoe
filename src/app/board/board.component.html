@@ -15,11 +15,19 @@
 <div class="playerturn" 
 [ngClass]= "{'blueText' : currentPlayerO, 'redText' : !currentPlayerO }"
 *ngIf="!finishedGame">
-  {{ currentPlayer() }}'s turn! </div>
+ It's {{ currentPlayer() }}'s turn! </div>
 
 <div class="playerturn" [ngClass]= "{'blueText' : !currentPlayerO, 'redText' : currentPlayerO }"
 *ngIf="finishedGame"> {{ getLastPlayer() }} WINS! </div>  
-  <br><br>
+  
+
+<br>
+<div class="score">
+    Score: O = {{ playerOscore }} | X = {{ playerXscore }}
+    </div>
+
+
+
 
 
 
@@ -37,7 +45,11 @@ let i = index"
 </div>
 </div>
 
+
 <br><br>
+
+
+
 <button (click)="newGame()" class="btn btn-primary newGameButton">
 New Game
 </button>
