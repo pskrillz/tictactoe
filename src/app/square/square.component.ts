@@ -5,7 +5,9 @@ import { Component, Input } from '@angular/core';
   template: `
 
   <button class="button1 btn" [ngClass]=
-  "{'btn-primary' : value == 'O',
+  "{ 
+    'defaultButton' : value == null,
+    'btn-primary' : value == 'O',
     'btn-warning' : value == 'X' }">
   {{ value }} 
   </button> 
