@@ -33,6 +33,9 @@ currentPlayer(){
   return this.currentPlayerO ? "O" : "X";
 }
 
+getLastPlayer(){
+  return this.currentPlayerO ? "X" : "O";
+}
 
 selectSquare(index){
   if (!this.squares[index]){
